@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Arrays in JS</title>
+		<script type="text/javascript">
+			//arrays alow me to hold multiple pieces of data in one var, all the same datatype	
+
+			//function to supply random feedback 
+			function feedback(){
+				var items= ["Well done!", "Great", "Amazing", "Good job!", "Awesome", "Fantasic", "Very good!"];
+				//get a random number from 0-7: Math.floor(Math.random()* 7);
+				//assign to the index - 
+				var index = Math.floor(Math.random()* 7);
+				//use the random index to get a items - items[index];
+				//display
+				document.getElementById("demo").innerHTML = "That work is: " +items[index];
+				
+			}
+			//demo of calling a function from another function
+			function arrayDemo(){
+				var name = prompt("Enter your name", "");
+				feedback(); //calling the function above
+			}
+			
+		</script>
+	</head>
+	<body>
+		<p id="demo">Hello</p>
+		<button onclick="arrayDemo()" type="button"> Click </button>
+	</body>
+
+
+</html>
